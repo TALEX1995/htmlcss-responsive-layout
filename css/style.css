@@ -36,16 +36,22 @@ a {
     font-size: var(--font-size-1-5rem);
 }
 
+main {
+    margin: 0 var(--font-size-1-5rem);
+}
+
 
 
 /* Utilities */
 
 .container {
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .column-flex {
@@ -83,7 +89,6 @@ header .container {
 
 header ul {
     list-style-type: none;
-    display: flex;
 }
 
 header .container > * {
@@ -95,7 +100,25 @@ header .container > * {
 }
 
 
+/* Product Content */
+
+.card {
+    height: 400px;
+    width: 100%;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+
+
+
+
 /* Media Queries */
+
+@media screen and (min-width: 768px) {
+    
+}
+
+
 
 @media screen and (min-width: 1200px) {
     header .fa-bars {
