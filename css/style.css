@@ -16,6 +16,7 @@
     --font-size-3rem: 3rem;
     --font-size-3-5rem: 3.5rem;
     --font-size-4rem: 3.5rem;
+    --bkg-color: #9792e4;
 }
 
 
@@ -36,8 +37,8 @@ a {
     font-size: var(--font-size-1-5rem);
 }
 
-main {
-    margin: 0 var(--font-size-1-5rem);
+section {
+    padding: 0 var(--font-size-1-5rem);
 }
 
 
@@ -102,7 +103,7 @@ header .container > * {
 
 /* Product Content */
 
-.card {
+#product-content .card {
     height: 400px;
     width: 100%;
     background-color: blue;
@@ -111,18 +112,32 @@ header .container > * {
 
 #product-content .row {
     gap: 15px;
+    padding-bottom: var(--font-size-4rem);
+}
+
+/* How we do */
+
+#how-we-do {
+    background-color: var(--bkg-color);
+}
+
+#how-we-do .card {
+    height: 500px;
+    background-color: yellow;
+    border: 1px solid black;
+    width: 100%;
 }
 
 
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
-    .column-66 {
+    #product-content .column-66 {
         width: calc(100% / 3 * 2 - 5px);
         border: 1px solid black;
     }
 
-    .column-33 {
+    #product-content .column-33 {
         width: calc(100% / 3 - 10px);
         border: 1px solid black;
     }
@@ -137,5 +152,9 @@ header .container > * {
 
     header .nav-bar {
         display: block;
+    }
+
+    #how-we-do .column-50 {
+        width: 50%;
     }
 }
