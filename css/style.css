@@ -106,16 +106,26 @@ header .container > * {
     height: 400px;
     width: 100%;
     background-color: blue;
-    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
-
+#product-content .row {
+    gap: 15px;
+}
 
 
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
-    
+    .column-66 {
+        width: calc(100% / 3 * 2 - 5px);
+        border: 1px solid black;
+    }
+
+    .column-33 {
+        width: calc(100% / 3 - 10px);
+        border: 1px solid black;
+    }
 }
 
 
