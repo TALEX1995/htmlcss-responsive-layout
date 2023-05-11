@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 
 * {
     padding: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* Properties */
+/* PROPERTIES */
 
 :root {
     --font-size-0-5rem: 0.5rem;
@@ -21,10 +21,11 @@
 }
 
 
-/* Generic */
+/* GENERIC */
 
 body {
     padding-top: 120px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 img {
@@ -42,9 +43,12 @@ section {
     padding: 0 var(--font-size-1-5rem);
 }
 
+h2 {
+    text-align: center;
+}
 
 
-/* Utilities */
+/* UTILITIES */
 
 .container {
     max-width: 100%;
@@ -62,7 +66,7 @@ section {
 }
 
 
-/* Header */
+/* HEADER */
 
 header {
     background-color: #0084fd;
@@ -102,7 +106,7 @@ header .container > * {
 }
 
 
-/* Product Content */
+/* PRODUCT CONTENT */
 
 #product-content .card {
     height: 400px;
@@ -118,7 +122,7 @@ header .container > * {
 
 /* How we do */
 
-#how-we-do {
+#how-we-do, #benefits {
     background-color: var(--bkg-color);
 }
 
@@ -129,7 +133,7 @@ header .container > * {
     width: 100%;
 }
 
-/* Testimonials */
+/* TESTIMONIALS */
 
 #testimonials .card {
     height: 400px;
@@ -150,6 +154,22 @@ header .container > * {
     margin-top: var(--font-size-4rem);
 }
 
+
+/* BENEFITS */
+
+#benefits .row {
+    gap: var(--font-size-1rem);
+    padding-bottom: var(--font-size-4rem);
+}
+
+#benefits .card {
+    height: 400px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
@@ -166,6 +186,10 @@ header .container > * {
     #testimonials .column-flex .card {
         display: flex;
     }
+
+    #benefits .card {
+        width: calc(50% - 8px);
+    }
 }
 
 
@@ -181,5 +205,13 @@ header .container > * {
 
     #how-we-do .column-50 {
         width: 50%;
+    }
+
+    #benefits .card {
+        width: calc(100% / 3 - calc(var(--font-size-1rem) * 2 / 3));
+    }
+
+    .container {
+        max-width: 1150px;
     }
 }
